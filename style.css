@@ -1017,3 +1017,265 @@ header {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(18, 61, 90, 0.15);
 }
+.team-section {
+  background-color: #fff7e8;
+  padding: 90px 8%;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.team-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.team-heading span {
+  display: inline-block;
+  color: #c98263;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.team-heading h2 {
+  color: #123d5a;
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-family: 'Aref Ruqaa', serif;
+}
+
+.team-heading p {
+  color: #2b4a60;
+  font-size: 21px;
+  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.team-slider {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 15px 5px 35px;
+}
+
+.team-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.team-slider::-webkit-scrollbar-track {
+  background-color: rgba(18, 61, 90, 0.08);
+  border-radius: 20px;
+}
+
+.team-slider::-webkit-scrollbar-thumb {
+  background-color: #c98263;
+  border-radius: 20px;
+}
+
+.team-card {
+  min-width: 285px;
+  background-color: #fffaf0;
+  border: 2px solid rgba(18, 61, 90, 0.85);
+  border-radius: 32px;
+  padding: 38px 25px 35px;
+  text-align: center;
+  box-shadow: 10px 12px 0 rgba(18, 61, 90, 0.10);
+  scroll-snap-align: center;
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 12px 16px 0 rgba(18, 61, 90, 0.13);
+}
+
+.team-img {
+  width: 145px;
+  height: 145px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #ffd9b0;
+  position: relative;
+}
+
+.team-img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #07143b;
+  border-radius: 50%;
+  right: -9px;
+  bottom: -9px;
+  z-index: 0;
+}
+
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.empty-photo {
+  background: linear-gradient(135deg, #ffe2b6, #e26f58);
+}
+
+.empty-photo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #e96b56;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.team-card h3 {
+  color: #07143b;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 800;
+}
+
+.team-card p {
+  color: #c98263;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 70px 6%;
+  }
+
+  .team-heading h2 {
+    font-size: 38px;
+  }
+
+  .team-card {
+    min-width: 250px;
+  }
+
+  .team-img {
+    width: 125px;
+    height: 125px;
+  }
+}
+/* خلفية موحدة لكل صفحات الموقع */
+body {
+  background-color: #fff7e8;
+  background-image:
+    radial-gradient(circle at 8% 5%, rgba(18, 61, 90, 0.06) 0 120px, transparent 121px),
+    radial-gradient(circle at 92% 18%, rgba(201, 130, 99, 0.08) 0 95px, transparent 96px),
+    linear-gradient(135deg, #fff7e8, #fffaf0);
+  background-attachment: fixed;
+}
+
+/* نخلي السكشنات تاخذ نفس الخلفية وما تختلف */
+.hero,
+.about-page-new,
+.about-intro,
+.about-details,
+.goals-new,
+.page-section,
+.contact-page,
+.join-page,
+.thanks-page,
+.writers-form-section,
+.published-writings,
+.team-section {
+  background: transparent !important;
+}
+
+/* زخرفة ناعمة موحدة للصفحات الداخلية */
+.page-section,
+.contact-page,
+.join-page,
+.thanks-page,
+.writers-form-section,
+.published-writings,
+.about-intro,
+.team-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-section::before,
+.contact-page::before,
+.join-page::before,
+.thanks-page::before,
+.writers-form-section::before,
+.published-writings::before,
+.about-intro::before,
+.team-section::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 2px solid rgba(18, 61, 90, 0.07);
+  border-radius: 50%;
+  top: -180px;
+  right: -140px;
+  z-index: 0;
+}
+
+.page-section > *,
+.contact-page > *,
+.join-page > *,
+.thanks-page > *,
+.writers-form-section > *,
+.published-writings > *,
+.about-intro > *,
+.team-section > * {
+  position: relative;
+  z-index: 1;
+}
+.team-icon-link {
+  width: 42px;
+  height: 42px;
+  background-color: #fff4dc;
+  color: #123d5a !important;
+  border: 2px solid #c98263;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px !important;
+  transition: 0.3s ease;
+}
+
+.team-icon-link:hover {
+  background-color: #c98263;
+  color: #fff4dc !important;
+  transform: translateY(-3px);
+}
+.logo {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  left: 45px;
+  top: 12px;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 170px;
+}
+
+.nav a {
+  font-size: 17px;
+  font-weight: 800;
+}

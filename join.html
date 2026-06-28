@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <title>انضم إلينا | مأوى القرّاء</title>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="شعار مأوى القرّاء" class="logo">
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن المأوى</a>
+    <a href="writers.html">رُكْنُ الكُتّاب</a>
+    <a href="sessions.html">الجلسات</a>
+    <a href="competitions.html">المسابقات</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
+</header>
+<section class="join-page">
+  <div class="join-card">
+    <h1>اِنْضَمْ إِلَى مَأْوَى القُرّاءِ</h1>
+    <p>كن جزءاً من مساحة هادئة تجمع محبّي القراءة والكتابة والجلسات الأدبية.</p>
+
+    <form action="https://formspree.io/f/mzdqwgrj" method="POST" class="join-form" id="joinForm">
+      <input type="text" name="name" placeholder="الاسم الكامل" required>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+      <input type="text" name="age_stage" placeholder="العمر أو المرحلة الدراسية">
+      <textarea name="reason" placeholder="لماذا ترغب بالانضمام إلينا؟" required></textarea>
+      <button type="submit">إرسال الطلب</button>
+    </form>
+  </div>
+</section>
+<script>
+  const form = document.getElementById("joinForm");
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+      if (response.ok) {
+        window.location.href = "thanks.html";
+      } else {
+        alert("صار خطأ بالإرسال، جرّب مرة ثانية.");
+      }
+    } catch (error) {
+      alert("تأكد من الاتصال بالإنترنت وجرّب مرة ثانية.");
+    }
+  });
+</script>
+</body>
+</html>
