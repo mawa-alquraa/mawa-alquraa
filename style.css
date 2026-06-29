@@ -1152,10 +1152,7 @@ header {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .team-section {
-    padding: 70px 6%;
-  }
+
 
   .team-heading h2 {
     font-size: 38px;
@@ -1281,13 +1278,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
-  header {
-    height: 82px;
-    min-height: 82px;
-    padding: 0 22px;
-    justify-content: space-between;
-  }
+
 
   .logo {
     position: static;
@@ -1357,26 +1348,10 @@ header {
   background-image: none !important;
 }
 
-/* إصلاح لون قائمة الموبايل */
-@media (max-width: 768px) {
-  .nav {
-    background: #183a56 !important;
-    background-color: #183a56 !important;
-    background-image: none !important;
-  }
+
 }
 
-@media (max-width: 768px) {
-  header {
-    height: 82px !important;
-    min-height: 82px !important;
-    padding: 0 22px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    background: #183a56 !important;
-    position: relative !important;
-  }
+
 
   .logo {
     position: static !important;
@@ -1463,9 +1438,7 @@ header {
     scrollbar-width: none;
   }
 
-  .nav::-webkit-scrollbar {
-    display: none;
-  }
+
 
   .nav a {
     flex: 0 0 auto !important;
@@ -1491,28 +1464,7 @@ header {
   background-image: none !important;
 }
 
-/* نخفي زر القائمة إذا كان موجود بالـ HTML */
-.menu-toggle {
-  display: none !important;
-}
 
-@media (max-width: 768px) {
-  body header {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 125px !important;
-    padding: 14px 10px 16px !important;
-    background: #183a56 !important;
-    background-color: #183a56 !important;
-    background-image: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    position: relative !important;
-    overflow: visible !important;
-  }
 
   body header .logo {
     position: static !important;
