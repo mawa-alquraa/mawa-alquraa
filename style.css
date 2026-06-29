@@ -1382,3 +1382,74 @@ header {
     background-image: none !important;
   }
 }
+/* زر قائمة الموبايل */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 82px !important;
+    min-height: 82px !important;
+    padding: 0 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #183a56 !important;
+    position: relative !important;
+  }
+
+  .logo {
+    position: static !important;
+    width: 92px !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    width: 46px;
+    height: 46px;
+    border: 2px solid #c98263;
+    border-radius: 14px;
+    background-color: #fff4dc;
+    color: #123d5a;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: absolute !important;
+    top: 82px !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #183a56 !important;
+    display: none !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 18px 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 12px 25px rgba(18, 61, 90, 0.18);
+  }
+
+  .nav.active {
+    display: flex !important;
+  }
+
+  .nav a {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 14px 0 !important;
+    font-size: 18px !important;
+    color: #fff4dc !important;
+  }
+
+  .nav a:hover {
+    transform: none !important;
+    background-color: rgba(255, 244, 220, 0.08);
+  }
+}
