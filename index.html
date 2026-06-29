@@ -13,11 +13,16 @@
 <body>
 <header>
   <img src="logo.png" alt="شعار مأوى القرّاء" class="logo">
-  <nav class="nav">
+
+  <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+    ☰
+  </button>
+
+  <nav class="nav" id="navMenu">
     <a href="index.html">الرئيسية</a>
     <a href="about.html">عن المأوى</a>
+    <a href="#team">فريقنا</a>
     <a href="writers.html">رُكْنُ الكُتّاب</a>
-    <a href="index.html#team">فريقنا</a>
     <a href="sessions.html">الجلسات</a>
     <a href="competitions.html">المسابقات</a>
     <a href="contact.html">تواصل معنا</a>
@@ -104,6 +109,16 @@
   menuToggle.addEventListener("click", function () {
     navMenu.classList.toggle("active");
   });
+</script>
+  <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+  }
 </script>
 </body>
 </html>
