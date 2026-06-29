@@ -1367,3 +1367,18 @@ body {
     width: 210px;
   }
 }
+/* إصلاح لون الهيدر */
+header {
+  background: #183a56 !important;
+  background-color: #183a56 !important;
+  background-image: none !important;
+}
+
+/* إصلاح لون قائمة الموبايل */
+@media (max-width: 768px) {
+  .nav {
+    background: #183a56 !important;
+    background-color: #183a56 !important;
+    background-image: none !important;
+  }
+}
